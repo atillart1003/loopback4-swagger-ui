@@ -1,0 +1,27 @@
+{
+    "name": "loopback4-swagger-ui-generator",
+    "version": "1.0.0",
+    "description": "Generate Swagger UI For Loopback 4",
+    "main": "src/indexSwaggerUi.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:atillart1003/loopback4-swagger-ui.git"
+    },
+    "keywords": [
+        "npm",
+        "Loopback4 swagger ui"
+    ],
+    "author": "Sawhaengthong K",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/atillart1003/loopback4-swagger-ui/issuess"
+    },
+    "homepage": "https://github.com/atillart1003/loopback4-swagger-ui/blob/master/README.md",
+    "devDependencies": {},
+    "dependencies": {
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "swagger-ui-dist": "^3.24.3"
+    }
+}
