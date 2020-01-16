@@ -1,6 +1,6 @@
 {
     "name": "loopback4-swagger-ui-generator",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Generate Swagger UI For Loopback 4",
     "main": "src/indexSwaggerUi.js",
     "scripts": {},
