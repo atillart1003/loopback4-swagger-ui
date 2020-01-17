@@ -1,0 +1,501 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "LoopBack Application",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/category-type/{id}": {
+      "get": {
+        "x-controller-name": "CategoryTypeController",
+        "x-operation-name": "findOne",
+        "tags": [
+          "CategoryTypeController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of CategoryTypeController.findOne"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "CategoryTypeController.findOne"
+      }
+    },
+    "/category-type": {
+      "post": {
+        "x-controller-name": "CategoryTypeController",
+        "x-operation-name": "create",
+        "tags": [
+          "CategoryTypeController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of CategoryTypeController.create"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryTypeExcluding_id_"
+              }
+            }
+          }
+        },
+        "operationId": "CategoryTypeController.create"
+      },
+      "get": {
+        "x-controller-name": "CategoryTypeController",
+        "x-operation-name": "find",
+        "tags": [
+          "CategoryTypeController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of CategoryTypeController.find"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "where": {
+                  "type": "object",
+                  "additionalProperties": true
+                },
+                "fields": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "boolean"
+                    },
+                    "name": {
+                      "type": "boolean"
+                    },
+                    "created_date_time": {
+                      "type": "boolean"
+                    },
+                    "created_by": {
+                      "type": "boolean"
+                    },
+                    "updated_date_time": {
+                      "type": "boolean"
+                    },
+                    "updated_by": {
+                      "type": "boolean"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "example": 100
+                },
+                "skip": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "order": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        ],
+        "operationId": "CategoryTypeController.find"
+      }
+    },
+    "/class-type/{id}": {
+      "get": {
+        "x-controller-name": "ClassTypeController",
+        "x-operation-name": "findOne",
+        "tags": [
+          "ClassTypeController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of ClassTypeController.findOne"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "ClassTypeController.findOne"
+      }
+    },
+    "/class-type": {
+      "post": {
+        "x-controller-name": "ClassTypeController",
+        "x-operation-name": "create",
+        "tags": [
+          "ClassTypeController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of ClassTypeController.create"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClassTypeExcluding_id_"
+              }
+            }
+          }
+        },
+        "operationId": "ClassTypeController.create"
+      },
+      "get": {
+        "x-controller-name": "ClassTypeController",
+        "x-operation-name": "find",
+        "tags": [
+          "ClassTypeController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of ClassTypeController.find"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "where": {
+                  "type": "object",
+                  "additionalProperties": true
+                },
+                "fields": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "boolean"
+                    },
+                    "name": {
+                      "type": "boolean"
+                    },
+                    "created_date_time": {
+                      "type": "boolean"
+                    },
+                    "created_by": {
+                      "type": "boolean"
+                    },
+                    "updated_date_time": {
+                      "type": "boolean"
+                    },
+                    "updated_by": {
+                      "type": "boolean"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "example": 100
+                },
+                "skip": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "order": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        ],
+        "operationId": "ClassTypeController.find"
+      }
+    },
+    "/engine-series/{id}": {
+      "get": {
+        "x-controller-name": "EngineSeriesController",
+        "x-operation-name": "findOne",
+        "tags": [
+          "EngineSeriesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of EngineSeriesController.findOne"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "EngineSeriesController.findOne"
+      }
+    },
+    "/engine-series": {
+      "post": {
+        "x-controller-name": "EngineSeriesController",
+        "x-operation-name": "create",
+        "tags": [
+          "EngineSeriesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of EngineSeriesController.create"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EngineSeriesExcluding_id_"
+              }
+            }
+          }
+        },
+        "operationId": "EngineSeriesController.create"
+      },
+      "get": {
+        "x-controller-name": "EngineSeriesController",
+        "x-operation-name": "find",
+        "tags": [
+          "EngineSeriesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return value of EngineSeriesController.find"
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "where": {
+                  "type": "object",
+                  "additionalProperties": true
+                },
+                "fields": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "boolean"
+                    },
+                    "name": {
+                      "type": "boolean"
+                    },
+                    "created_date_time": {
+                      "type": "boolean"
+                    },
+                    "created_by": {
+                      "type": "boolean"
+                    },
+                    "updated_date_time": {
+                      "type": "boolean"
+                    },
+                    "updated_by": {
+                      "type": "boolean"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "example": 100
+                },
+                "skip": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "order": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        ],
+        "operationId": "EngineSeriesController.find"
+      }
+    },
+    "/ping": {
+      "get": {
+        "x-controller-name": "PingController",
+        "x-operation-name": "ping",
+        "tags": [
+          "PingController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ping Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "greeting": {
+                      "type": "string"
+                    },
+                    "date": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "headers": {
+                      "type": "object",
+                      "properties": {
+                        "Content-Type": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PingController.ping"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://zdj1qdb4t2.execute-api.ap-southeast-1.amazonaws.com/latest/"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "CategoryTypeExcluding_id_": {
+        "title": "CategoryTypeExcluding_id_",
+        "description": "(Schema options: { title: '', exclude: [ 'id' ] })",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "created_date_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_date_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClassTypeExcluding_id_": {
+        "title": "ClassTypeExcluding_id_",
+        "description": "(Schema options: { title: '', exclude: [ 'id' ] })",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "created_date_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_date_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EngineSeriesExcluding_id_": {
+        "title": "EngineSeriesExcluding_id_",
+        "description": "(Schema options: { title: '', exclude: [ 'id' ] })",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "created_date_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_date_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

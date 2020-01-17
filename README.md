@@ -1,5 +1,10 @@
 # Swagger Ui for Loopback 4
 
+## Install
+```sh
+npm i loopback4-swagger-ui-generator
+```
+
 ## Import
 
 ```js
