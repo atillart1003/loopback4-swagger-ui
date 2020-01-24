@@ -104,9 +104,7 @@ let htmlTplString = `
 
 </html>
 `
-// var strSpec1 = JSON.stringify(spec1)
-// var replaceSpec1 = strSpec1.replace("http://localhost:3000", url)
-// spec1 = JSON.parse(replaceSpec1);
+
 var jsTplString = `
 window.onload = function() {
   // Build a system
@@ -122,8 +120,10 @@ window.onload = function() {
   console.log(options)
   var urls = options.swaggerUrls
   var customOptions = options.customOptions
-  var spec1 = options.swagg
-  
+  var spec1 = options.swaggerDoc
+  var strSpec1 = JSON.stringify(spec1)
+  var replaceSpec1 = strSpec1.replace("http://localhost:3000", url)
+  spec1 = JSON.parse(replaceSpec1);
   var swaggerOptions = {
     spec: spec1,
     url: url,
