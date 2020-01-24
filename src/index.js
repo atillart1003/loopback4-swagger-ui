@@ -2,6 +2,7 @@
 
 let Module = require('module');
 let fs = require('fs');
+// const yaml = require('js-yaml');
 
 Module._extensions['.png'] = function (module, fn) {
   let base64 = fs.readFileSync(fn).toString('base64');
@@ -103,7 +104,9 @@ let htmlTplString = `
 
 </html>
 `
-
+// var strSpec1 = JSON.stringify(spec1)
+// var replaceSpec1 = strSpec1.replace("http://localhost:3000", url)
+// spec1 = JSON.parse(replaceSpec1);
 var jsTplString = `
 window.onload = function() {
   // Build a system
@@ -115,9 +118,12 @@ window.onload = function() {
   }
   <% swaggerOptions %>
   url = options.swaggerUrl || url
+  console.log(url)
+  console.log(options)
   var urls = options.swaggerUrls
   var customOptions = options.customOptions
-  var spec1 = options.swaggerDoc
+  var spec1 = options.swagg
+  
   var swaggerOptions = {
     spec: spec1,
     url: url,

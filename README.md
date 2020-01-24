@@ -1,5 +1,7 @@
 # Swagger Ui for Loopback 4
 
+> Referance: [Swagger Ui](https://github.com/swagger-api/swagger-ui)
+
 ## Install
 ```sh
 npm i loopback4-swagger-ui-generator
@@ -12,6 +14,8 @@ const swaggerUi = require('loopback4-swagger-ui-generator')
 ```
 
 ## How to use
+> [Claudia api builder](https://github.com/claudiajs/claudia-api-builder)
+
 ```js
 const swaggerUi = require('loopback4-swagger-ui-generator')
 
