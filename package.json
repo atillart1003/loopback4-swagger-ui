@@ -1,9 +1,11 @@
 {
     "name": "loopback4-swagger-ui-generator",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Generate Swagger UI For Loopback 4",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "test": "node example/run.js"
+    },
     "repository": {
         "type": "git",
         "url": "git@github.com:atillart1003/loopback4-swagger-ui.git"

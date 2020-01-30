@@ -47,28 +47,38 @@ let options = {
   }
 };
 
-let swaggerUiOpts = {
-  explorer: false, // multiple select
-  swaggerOptions: options,
-  customCss: '.swagger-ui .topbar { background-color: pink }',
-  swaggerUrl: '/swagger.json',
-//   swaggerUrls: [{
-//     url: url + "/latest/swaggerapi.json",
-//     name: "Vehicle model"
-//   }, {
-//     url: "https://petstore.swagger.io/v2/swagger.json",
-//     name: "Petstore"
-//   }],
-  // customJs: '/my-custom.js',
-  operationsSorter: 'alpha',
-  customCssUrl: 'https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css'
-}
-
 api.get('/apis-doc', (request) => {
-  'use strict';
-  let swaggerHtml = swaggerUi.generateHTML(swaggerDocument, swaggerUiOpts)
-  return swaggerHtml
+    'use strict';
+    let swaggerUiOpts = {
+        explorer: false, // multiple select
+        swaggerOptions: options,
+        request,
+        customCss: '.swagger-ui .topbar { background-color: pink }',
+        //   swaggerUrl: '<APIGATEWAY_URL>',
+        //   swaggerUrls: [{
+        //     url: url + "/latest/swaggerapi.json",
+        //     name: "Vehicle model"
+        //   }, {
+        //     url: "https://petstore.swagger.io/v2/swagger.json",
+        //     name: "Petstore"
+        //   }],
+        // customJs: '/my-custom.js',
+        operationsSorter: 'alpha',
+        customCssUrl: 'https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css'
+    }
+let swaggerHtml = swaggerUi.generateHTML(swaggerDocument, swaggerUiOpts)
+return swaggerHtml
 }, { success: { contentType: 'text/html' } });
 
 module.exports = api;
 ```
+
+## Example
+clone `https://github.com/atillart1003/loopback4-swagger-ui.git`
+```sh
+cd loopback4-swagger-ui
+npm install
+npm test
+```
+Example app listening on port 5000!
+URL: `http://localhost:5000/api-docs-html`

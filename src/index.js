@@ -189,6 +189,12 @@ let generateHTML = function (swaggerDoc, opts, options, customCss, customfavIcon
   let htmlWithCustomJs = htmlWithFavIcon.replace('<% customJs %>', customJs ? `<script src="${customJs}"></script>` : '')
   let htmlWithCustomCssUrl = htmlWithCustomJs.replace('<% customCssUrl %>', customCssUrl ? `<link href="${customCssUrl}" rel="stylesheet">` : '')
 
+  if (opts.request && !swaggerUrl) {
+    let { request } = opts
+    let mainUrl = request.headers.Host + "/" + request.env.lambdaVersion + "/"
+    swaggerUrl = mainUrl
+  }
+
   let initOptions = {
     swaggerDoc: swaggerDoc || undefined,
     customOptions: options,
