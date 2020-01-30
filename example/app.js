@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const swaggerUi = require('../src/index')
-const swaggerDoc = require('./swagger.json')
+const swaggerDoc = require('./petstore.json')
 
 let options = {
     validatorUrl: null,
@@ -27,7 +27,6 @@ let options = {
 let swaggerUiOpts = {
     explorer: false,
     swaggerUrl: 'https://petstore.swagger.io/v2/swagger.json',
-    // request,
     swaggerOptions: options,
     customCss: '.swagger-ui .topbar { background-color: blue }'
 }

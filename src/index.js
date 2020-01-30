@@ -115,7 +115,7 @@ window.onload = function() {
     url = window.location.origin;
   }
   <% swaggerOptions %>
-  url = options.swaggerUrl || url
+  url = options.swaggerUrl || url + '/latest/'
   console.log(url)
   console.log(options)
   var urls = options.swaggerUrls
@@ -161,12 +161,14 @@ let generateHTML = function (swaggerDoc, opts, options, customCss, customfavIcon
   let customJs
   let swaggerUrls
   let customCssUrl
+  let { request } = opts
   if (opts && typeof opts === 'object') {
     options = opts.swaggerOptions
     customCss = opts.customCss
     customJs = opts.customJs
     customfavIcon = opts.customfavIcon
-    swaggerUrl = opts.swaggerUrl
+    // swaggerUrl = opts.swaggerUrl
+    // swaggerUrl = request ? 'https://' + request.headers.Host + "/" + request.env.lambdaVersion + "/" : opts.swaggerUrl
     swaggerUrls = opts.swaggerUrls
     isExplorer = opts.explorer || !!swaggerUrls
     customSiteTitle = opts.customSiteTitle
@@ -189,11 +191,12 @@ let generateHTML = function (swaggerDoc, opts, options, customCss, customfavIcon
   let htmlWithCustomJs = htmlWithFavIcon.replace('<% customJs %>', customJs ? `<script src="${customJs}"></script>` : '')
   let htmlWithCustomCssUrl = htmlWithCustomJs.replace('<% customCssUrl %>', customCssUrl ? `<link href="${customCssUrl}" rel="stylesheet">` : '')
 
-  if (opts.request && !swaggerUrl) {
-    let { request } = opts
-    let mainUrl = request.headers.Host + "/" + request.env.lambdaVersion + "/"
-    swaggerUrl = mainUrl
-  }
+  // if (opts.request && !swaggerUrl) {
+  //   swaggerUrl = ''
+  //   let { request } = opts
+  //   let mainUrl = request.headers.Host + "/" + request.env.lambdaVersion + "/"
+  //   swaggerUrl = mainUrl
+  // }
 
   let initOptions = {
     swaggerDoc: swaggerDoc || undefined,

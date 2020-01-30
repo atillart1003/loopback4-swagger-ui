@@ -47,25 +47,25 @@ let options = {
   }
 };
 
+let swaggerUiOpts = {
+    explorer: false, // multiple select
+    swaggerOptions: options,
+    customCss: '.swagger-ui .topbar { background-color: pink }',
+    //   swaggerUrl: '<APIGATEWAY_URL>',
+    //   swaggerUrls: [{
+    //     url: url + "/latest/swaggerapi.json",
+    //     name: "Vehicle model"
+    //   }, {
+    //     url: "https://petstore.swagger.io/v2/swagger.json",
+    //     name: "Petstore"
+    //   }],
+    // customJs: '/my-custom.js',
+    operationsSorter: 'alpha',
+    customCssUrl: 'https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css'
+}
+
 api.get('/apis-doc', (request) => {
     'use strict';
-    let swaggerUiOpts = {
-        explorer: false, // multiple select
-        swaggerOptions: options,
-        request,
-        customCss: '.swagger-ui .topbar { background-color: pink }',
-        //   swaggerUrl: '<APIGATEWAY_URL>',
-        //   swaggerUrls: [{
-        //     url: url + "/latest/swaggerapi.json",
-        //     name: "Vehicle model"
-        //   }, {
-        //     url: "https://petstore.swagger.io/v2/swagger.json",
-        //     name: "Petstore"
-        //   }],
-        // customJs: '/my-custom.js',
-        operationsSorter: 'alpha',
-        customCssUrl: 'https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css'
-    }
 let swaggerHtml = swaggerUi.generateHTML(swaggerDocument, swaggerUiOpts)
 return swaggerHtml
 }, { success: { contentType: 'text/html' } });
